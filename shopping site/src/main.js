@@ -82,7 +82,6 @@ filtro.forEach(x=>{
             return y.sexo === x.id || y.categoria === x.id
         })
             loader(filtrado)
-            console.log(filtrado);
         }
     })
 })
@@ -91,4 +90,13 @@ filtro.forEach(x=>{
 const preloader = document.getElementById('preloader')
 window.addEventListener('load', ()=>{
     preloader.style.display = 'none'
+})
+
+//***************************** RESPONSIVE MENU *********************** */
+
+const burger = document.getElementById('menu')
+const aside = document.querySelector('.aside')
+
+burger.addEventListener('click', ()=>{
+    aside.classList.toggle('activador-menu')
 })
