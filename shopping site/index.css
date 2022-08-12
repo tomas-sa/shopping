@@ -31,6 +31,7 @@ html{
     width: 100%;
     height: 80vh;
     background-color: #f1f1f1;
+    overflow: hidden;
 }
 .hero-container{
     width: 90%;
@@ -42,8 +43,9 @@ html{
     display: flex;
     align-items: center;
     justify-content: space-between;
+
 }
-#woman{
+.woman{
     width: 800px;
     position: absolute;
     left: +800px;
@@ -91,8 +93,11 @@ a{
     padding: 7px 5px;
 }
 .categorias {
-    margin-left: 200px;
+    /* margin-left: 200px; */
     display: grid;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
     grid-template-columns: repeat(6, 1fr);
     grid-auto-rows: 210px;
     gap: 15px;
@@ -198,11 +203,20 @@ a{
     .item-1, .item-2, .item-3, .item-4, .item-5, .item-6, .item-7{
         grid-column: span 6;
     }
-    #woman{
+    .woman{
         position: initial;
     }
     .hero-container{
         flex-direction: column;
         gap: 100px;
+    }
+    #mujer1{
+        display: none;
+    }
+    #header{
+        font-size: 3rem;
+    }
+    .section-one{
+        padding-top: 200px;
     }
 }
