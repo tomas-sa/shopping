@@ -193,3 +193,16 @@ a{
     color: #f1f1f1;
     background-color: rgb(250, 53, 53);
 }
+
+@media screen and (max-width: 1130px) {
+    .item-1, .item-2, .item-3, .item-4, .item-5, .item-6, .item-7{
+        grid-column: span 6;
+    }
+    #woman{
+        position: initial;
+    }
+    .hero-container{
+        flex-direction: column;
+        gap: 100px;
+    }
+}
