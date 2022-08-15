@@ -100,3 +100,7 @@ const aside = document.querySelector('.aside')
 burger.addEventListener('click', ()=>{
     aside.classList.toggle('activador-menu')
 })
+
+aside.addEventListener('click', ()=>{
+    aside.classList.remove('activador-menu')
+})
