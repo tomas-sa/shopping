@@ -53,8 +53,8 @@ img{
     width: 200px;
     height: auto;
 }
-.fa-solid{
-    padding-left: 50px;
+.fa-bars{
+    margin-left: 50px;
     display: none;
 }
 .articulos-contenedor{
@@ -102,6 +102,12 @@ border-radius: 5px;
 .precio{
     color: green;
     font-weight: bold;
+}
+.botones{
+    width: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 #preloader{
     position: fixed;

@@ -29,7 +29,7 @@ html{
 }
 .hero{
     width: 100%;
-    height: 80vh;
+    height: 90vh;
     background-color: #f1f1f1;
     overflow: hidden;
 }
@@ -161,8 +161,9 @@ a{
     bottom: 10px;
     left: 15px;
     z-index: 2;
-    color: rgb(34, 34, 34);
+    color: rgb(255, 255, 255);
     font-size: 20px;
+    text-shadow: 1px 2px 1px #1f1f1f;
 }
 
 .cover::after {
