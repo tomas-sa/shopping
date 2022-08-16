@@ -199,6 +199,31 @@ a{
     color: #f1f1f1;
     background-color: rgb(250, 53, 53);
 }
+#ofertas-container{
+    display: flex;
+    justify-content: space-around;
+    margin: 50px 0;
+}
+.ofertas{
+    width: 85%;
+    display: flex;
+    justify-content: space-around;
+}
+#imagen-oferta{
+    width: 10rem;
+}
+#header-ofertas{
+    margin-left: 5%;
+    margin-top: 60px;
+    font-size: 2.5rem;
+}
+.precio-tachado{
+    text-decoration: line-through;
+    color: red;
+}
+.precio-rebajado{
+    color: rgb(2, 199, 2);
+}
 
 @media screen and (max-width: 1130px) {
     .item-1, .item-2, .item-3, .item-4, .item-5, .item-6, .item-7{

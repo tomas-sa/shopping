@@ -49,3 +49,37 @@ window.addEventListener('scroll', ()=>{
         })
     }
 })
+//***************************** OFERTAS INDEX *********************** */
+/* const ofertas = articulos.filter(x =>{
+    return x.precio <= 60
+}) */
+const lista = []
+for(let i = 0; i < 4; i++){
+    lista.push(articulos[Math.floor(Math.random() * articulos.length)])
+}
+const descuentos =[]
+for(let i = 0; i < 4; i++){
+    descuentos.push(Math.random().toFixed(2))
+}
+
+
+const ofertasContainer = document.getElementById('ofertas-container')
+const ofertasItems = lista.map(x=>{
+    return `
+    <div class="oferta-item">
+        <img id='imagen-oferta' src="${x.imagen}" alt="">
+        <p>${x.nombre}</p>
+        <p class='precio-tachado'>$${x.precio}</p>
+        <p class='precio-rebajado'>$${Math.floor(x.precio - (x.precio * descuentos[Math.floor(Math.random()) * descuentos.length +1]))}</p>
+        <p></p>
+    </div>
+    `
+}).join('')
+ofertasContainer.innerHTML = ofertasItems
+
+const tachado = document.getElementsByClassName('precio-tachado')
+const rebajado = document.getElementsByClassName('precio-rebajado')
+console.log(tachado[0]);
+
+
+
