@@ -11,12 +11,13 @@
 <body>
     <div class="main-container">
         <nav class="nav">
-            <a style="text-decoration:none;" href="shopping.html">
-                <h1>shopping</h1>
-            </a>
+            <i id="burger" class="fa-solid fa-bars nav-dis"></i>
+            <a class="nav-dis" id="logo" href="index.html">ShopCenter</a>
+            <a class="seguirComprando" href="shopping.html">seguir comprando</a>
+            
             <div class="carrito">
-                <a href="cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
-                <div id="carrito-cantidad">0</div>
+                <a href="cart.html"><i class="fa-solid fa-cart-shopping nav-dis"></i></a>
+                <div class="nav-dis" id="carrito-cantidad">0</div>
             </div>
         </nav>
         <div class="articulos-contenedor">
@@ -26,6 +27,8 @@
             <div id="notFound" class="notFound">
             </div>
             <div id="cartSection" class="cartSection"></div>
+            <div class="discount" id="discount"></div>
+            <div id="precioFinal"></div>
         </div>
     </div>
 </body>

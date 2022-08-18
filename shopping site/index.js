@@ -53,7 +53,7 @@ window.addEventListener('scroll', ()=>{
 /* const ofertas = articulos.filter(x =>{
     return x.precio <= 60
 }) */
-const lista = []
+/* const lista = []
 for(let i = 0; i < 4; i++){
     lista.push(articulos[Math.floor(Math.random() * articulos.length)])
 }
@@ -80,6 +80,26 @@ ofertasContainer.innerHTML = ofertasItems
 const tachado = document.getElementsByClassName('precio-tachado')
 const rebajado = document.getElementsByClassName('precio-rebajado')
 console.log(tachado[0]);
+ */
 
 
+//***************************** FUNCION CLIPBOARD *********************** */
+function copiar(){
+    const codigo = document.getElementById('codigo')
+    navigator.clipboard.writeText(codigo.textContent)
+}
 
+//***************************** MODAL CUPON *********************** */
+ const equis = document.querySelector('.fa-x')
+ equis.addEventListener('click', ()=>{
+    const modal = document.querySelector('.modal-cupon')
+    modal.style.display = 'none'
+ })
+
+ //***************************** MENU BURGER *********************** */
+
+ const burger = document.getElementById('burger')
+ const listaNav = document.getElementsByClassName('lista-nav')
+ burger.addEventListener('click', ()=>{
+    listaNav[0].classList.toggle('mostrar')
+ })

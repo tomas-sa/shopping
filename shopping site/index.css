@@ -24,6 +24,61 @@ html{
     position: absolute;
 /*     top: 20px; */
 }
+.fa-bars{
+    display: none;
+}
+.modal-cupon{
+    position: fixed;
+    right: 5%;
+    bottom: 10%;
+    height: 180px;
+    width: 300px;
+    background-color: #f1f1f1;
+    border: 1px solid #1f1f1f;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 5px;
+}
+.modal-cupon h3{
+    font-size: 1.6rem;
+    width: max-content;
+    color: crimson;
+}
+.modal-cupon p{
+    font-size: 0.9rem;
+}
+.fa-x{
+    position: absolute;
+    top: 10px;
+    right: 8px;
+    color: red;
+    cursor: pointer;
+}
+#botonCopiar{
+    padding: 2px 30px;
+    border-radius: 5px;
+    border: 2px solid #1f1f1f;
+    color: #1f1f1f;
+    transition: 0.2s;
+}
+#botonCopiar:hover{
+    background-color: #1f1f1f;
+    color: #f1f1f1;
+}
+#codigo{
+    border: none;
+    resize: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #414141;
+    text-align: center;
+    background-color: #f1f1f1;
+}
 #letras{
     color: #1f1f1f;
 }
@@ -232,6 +287,7 @@ a{
     .woman{
         position: initial;
     }
+    
     .hero-container{
         flex-direction: column;
         gap: 100px;
@@ -244,5 +300,29 @@ a{
     }
     .section-one{
         padding-top: 200px;
+    }
+    .fa-bars {
+        display: initial;
+    }
+    .lista-nav{
+        display: none;
+        position: absolute;
+        top: 60px;
+        background-color: #adadad;
+        width: 100%;
+        padding: 20px 0;
+        font-size: 1rem;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+    .nav{
+        justify-content: space-around;
+    }
+    .modal-cupon{
+        right: 50%;
+        transform: translateX(50%);
+    }
+    .mostrar {
+        display: initial;
     }
 }

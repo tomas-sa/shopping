@@ -12,8 +12,9 @@
     <div class="main-container">
         <div class="hero">
             <nav class="nav">
+                <i id="burger" class="fa-solid fa-bars nav-dis"></i>
                 <a class="nav-dis" id="logo" href="#">ShopCenter</a>
-                <ul class="lista-nav">
+                <ul id="listaDes" class="lista-nav">
                     <li class="item-nav"><a class="nav-dis" href="#categorias">categorias</a></li>
                     <!-- <li class="item-nav"><a class="nav-dis" href="#">mujer</a></li>
                     <li class="item-nav"><a class="nav-dis" href="#">media</a></li> -->
@@ -38,7 +39,6 @@
         <!-- <img id="wave" src="images/wave.svg" alt=""> -->
         <!-- <h2 id="header-ofertas">HOT SALE</h2> -->
         <!-- <div id="ofertas-container" class="ofertas-container">
-            
         </div> -->
         <div id="categorias" class="container">
             <div class="categorias">
@@ -65,6 +65,13 @@
                 </a>
             </div>
         </div>
+    </div>
+    <div class="modal-cupon">
+        <h3>Llevate un 30% off </h3>
+        <p>agregando este cupón al realizar la compra</p>
+        <textarea id="codigo">COMPRA123</textarea>
+        <button id="botonCopiar" onclick="copiar()">copiar</button>
+        <i class="fa-solid fa-x"></i>
     </div>
 </body>
 <script src="src/data.js"></script>

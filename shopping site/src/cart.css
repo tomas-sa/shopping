@@ -4,6 +4,15 @@
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
 }
+@font-face {
+    font-family: "blackbird";
+    src: url("../fonts/Projekt Blackbird v2.otf");
+}
+
+@font-face {
+    font-family: "helfita";
+    src: url("../fonts/DST Helfita Thin.ttf");
+}
 .nav {
     color: #f1f1f1;
     background-color: #1f1f1f;
@@ -12,7 +21,17 @@
     top: 0;
     width: 100%;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    align-items: center;
+}
+.seguirComprando{
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 1px solid #f1f1f1;
+    padding:2px 5px ;
+    border-radius: 5px;
+
 }
 .fa-solid {
     cursor: pointer;
@@ -21,6 +40,13 @@
 .carrito {
     display: flex;
     gap: 8px;
+    margin-right: 20px;
+}
+#logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #f1f1f1;
+    margin-left: 35px;
 }
 
 a {
@@ -36,13 +62,18 @@ a {
 .cartSection{
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
+    margin-left: 60px;
     gap: 20px;
 }
 .cartItem{
     display: flex;
+    justify-content: space-between;
     width: 400px;
     gap: 15px;
+    /* border: 1px solid rgb(128, 128, 128); */
+    background-color: #d4d4d4;
+    border-radius: 5px;
 }
 .upper{
     display: flex;
@@ -51,7 +82,7 @@ a {
     align-items: center;
 }
 .precio{
-    background-color: #1f1f1f;
+    background-color: #ff6464;
     color: #f1f1f1;
     padding: 2px 5px;
     border-radius: 5px;
@@ -63,4 +94,175 @@ a {
 }
 .articulos-contenedor{
     margin-bottom: 50px;
+}
+#descuento-container{
+    position: fixed;
+    right: 160px;
+    top: 15%;
+}
+.header-descuento{
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.activar-cupon{
+    margin-top: 10px;
+    padding:3px 0;
+    width: 100%;
+    border-radius: 5px;
+    border: 2px solid rgb(250, 53, 53);
+    color:rgb(250, 53, 53);
+    background-color: white;
+    text-transform: capitalize;
+    transition: 0.2s;
+}
+.activar-cupon:hover{
+    color: white;
+    background-color: rgb(250, 53, 53);
+}
+.seguirComprando, #logo{
+    text-decoration: none;
+}
+#precioFinal{
+    position: fixed;
+    right: 100px;
+    top: 35%;
+    background-color: #f1f1f1;
+    border: 1px solid#d1d1d1;
+    font-family: 'blackbird';
+    text-align: center;
+    border-radius: 5px;
+}
+#total-container{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0;
+}
+#resumen-compra{
+    background-color: #d1d1d1;
+    width: 100%;
+    padding: 10px 40px;
+    font-family: 'blackbird';
+    font-size: 1.4rem;
+    text-transform: uppercase;
+}
+#subtotal{
+    font-size: 1rem;
+    font-weight: bold;
+}
+.incorrecto{
+    display: inline-block;
+    background-color: rgb(252, 204, 204);
+    padding: 10px 30px;
+    border-radius: 5px;
+    border: 2px solid red;
+    color: red;
+    opacity: 0;
+    transition: 0.1s;
+}
+.correcto {
+    display: inline-block;
+    background-color: rgb(206, 252, 204);
+    padding: 10px 30px;
+    border-radius: 5px;
+    border: 2px solid rgb(1, 168, 1);
+    color: rgb(1, 168, 1);
+    opacity: 0;
+    transition: 0.1s;
+}
+.incorrecto{
+    position: fixed;
+    top: 28%;
+    right: 162px;
+}
+.correcto{
+    position: fixed;
+    top: 28%;
+    right: 155px;
+}
+.activar{
+    opacity: 1;
+}
+#boton-pagar{
+    width: 100%;
+    padding: 10px 0;
+    border: none;
+    background-color: #1f1f1f;
+    color: #f1f1f1;
+    border-radius: 0 0 5px 5px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+#ahorrando{
+    background-color: rgb(133, 252, 129);
+    font-weight: bold;
+    color: #535353;
+    padding: 5px 0;
+}
+#titulo{
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.fa-bars{
+    display: none;
+}
+@media screen and (max-width:850px) {
+    #descuento-container, #precioFinal{
+        position: relative;
+        margin-top: 50px;
+        width: 80%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    #descontador{
+        width: 100%;
+        padding: 4px 0;
+    }
+    .container-carteles{
+        position: relative;
+        margin-top: 0;
+    }
+    .incorrecto{
+        position: initial;
+        width: 80%;
+        text-align: center;
+        right: 50%;
+        transform: translateX(12%);
+        margin-top: 0;
+      }
+    .correcto{
+        position: initial;
+        width: 80%;
+            text-align: center;
+            right: 50%;
+            transform: translateX(12%);
+            margin-top: 40px;
+    }
+    .cartSection{
+        width: 100%;
+        margin-left: 0;
+        position: relative;
+        left: 50%;
+        justify-content: center;
+        transform: translateX(-50%);
+    }
+    .seguirComprando {
+        display: none;
+    }
+    .nav{
+        justify-content: space-around;
+        z-index: 5;
+    }
+    .fa-bars{
+        display: initial;
+    }
+    .discount{
+        background-color: #929292;
+        position: fixed;
+        width: 100%;
+        top: 60px;
+        display: none;
+    }
+    .mostrar{
+        display: initial;
+    }
 }
