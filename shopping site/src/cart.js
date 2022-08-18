@@ -16,6 +16,8 @@ const aside = document.getElementsByClassName('discount')
 burger.addEventListener('click', ()=>{
     aside[0].classList.toggle('mostrar')
 })
+//************************* MODAL COMPRA ************************ */
+
 
 //************************* FUNCIONES ************************ */
 function generador(){
@@ -159,5 +161,15 @@ function actualizar(id){
     document.getElementById(id).innerHTML = search.item
     suma()
 }
+const btnPagar = document.getElementById('boton-pagar')
+const modalCompra = document.getElementById('modalCompra')
+console.log(btnPagar);
+if(btnPagar){
+btnPagar.addEventListener('click', ()=>{
+    modalCompra.style.display = 'initial'
+    localStorage.removeItem('data', JSON.stringify(basket))
+    generador()
+})}
+
 
 generador()
