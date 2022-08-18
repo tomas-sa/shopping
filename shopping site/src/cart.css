@@ -261,6 +261,7 @@ a {
         width: 100%;
         top: 60px;
         display: none;
+        z-index: 5;
     }
     .mostrar{
         display: initial;

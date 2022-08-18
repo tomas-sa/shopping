@@ -53,7 +53,7 @@ function generador(){
         </div>
         `
     } else{
-        const contenedorFinal = document.getElementById('precioFinal').innerHTML = ''
+        document.getElementById('precioFinal').innerHTML = ''
         cartSection.innerHTML = ``
          discount.innerHTML = ``
         notFound.innerHTML = `
